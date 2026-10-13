@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>COUNTDOWN</h2>
+    <p><span id="secs">30</span></p>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="reset">Reset</button>
+    <script>
+        let secs=30;
+        let outputsecs=document.getElementById('secs');
+        const start=document.getElementById('start');
+        const stop=document.getElementById('stop');
+        const reset=document.getElementById('reset');
+        function countdown(){
+            
+            if (secs>9){
+                secs--;
+                outputsecs.innerHTML=secs
+            }
+            if(secs<=9){
+                secs--;
+                outputsecs.innerHTML='0'+secs
+            }
+            if(secs<=0){
+                outputsecs.innerHTML=0;
+                alert("Time's up!")
+            }
+        }
+        let interval;
+        document.getElementById('start').addEventListener('click',function() {
+            clearInterval(interval);
+            interval=setInterval(countdown,1000);
+        })
+        document.getElementById('stop').addEventListener('click',function() {
+            clearInterval(interval);
+        })
+        document.getElementById('reset').addEventListener('click',function (){
+            secs=30;
+            outputsecs.innerHTML=30;
+        })
+    </script>
+</body>
+</html>

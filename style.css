@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(255, 219, 151);
+}
+button{
+    background: orange;
+    border: 1px solid orange;
+    border-radius:30px ;
+    padding: 5%;
+    color: rgb(255, 219, 151);
+    margin-left: 200px;
+}
+button:hover{
+    background-color: rgb(255, 219, 151);
+    border: 3px solid orange;
+    color: orange;
+}
+p{
+    text-align: center;
+    font-family: fantasy;
+    font-size: 70px;
+    color: rgb(210, 142, 16);
+    
+}
+h2{
+    color: rgb(210, 142, 16);
+    text-align: center;
+    font-family: fantasy;
+    font-size: 30px;
+}
